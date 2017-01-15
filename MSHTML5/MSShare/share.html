@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-ng-app="myApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="telephone=no" name="format-detection">
+
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>欢乐时空 {{title}} </title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+    <style type="text/css">
+        body{ background: #eee; font-size: 14px; padding-top: 10px; font-family: 'Microsoft YaHei';}
+        a:focus, a:hover {
+            color: #23527c;
+            text-decoration: none;
+        }
+
+        .wrapper{max-width: 960px; margin: 0 auto;}
+        video{ max-height: 480px; }
+        .nav-head{ padding: 10px; margin:0 -15px; overflow: hidden; border-bottom: 1px solid #ccc; background: #000; color: #fff;}
+        .app-info{ float: left; margin-left: 10px; }
+        .app-info p{ margin-bottom: 5px;}
+        .list_title{ font-size: 16px; padding: 10px; }
+        .box{ border: 1px solid #ccc; background: #fff; }
+        .icon{ font-size: 20px; color: #000;}
+        .post_info{ padding: 10px; margin-bottom: 10px; border-bottom: 1px #eee solid;}
+        .post_info>a{font-size: 16px; font-weight: 400; color: #000; margin-left: 15px; }
+        .img_item{ height: 120px; overflow: hidden;}
+        .img_item>img{  }
+        .list_item>p{ padding: 10px; color: #000; height: 60px; overflow: hidden; }
+        .hot_box{ background: #fff;}
+        @media (min-width: 768px){.hot_box{margin-left: 10px;}}
+    </style>
+</head>
+
+<body ng-controller="content" title="">
+<div class="container-fluid wrapper" >
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 box" style="margin-bottom: 15px;">
+            <div class="nav-head">
+                <a href="#" style="float:left;">
+                    <img src="{{lang.logo}}" height="48" />
+                </a>
+                <div class="app-info" style="float: left;">
+                    <p style="font-size: 16px;">{{lang.appName}}</p>
+                    <p>{{lang.appDesc}}</p>
+                </div>
+                <a class="btn btn-primary" href="{{lang.downloadUrl}}" style="float: right; margin-top: 10px;">{{lang.download}}</a>
+
+            </div>
+            <h3>{{title}}</h3>
+            <div ng-switch="type">
+                <div ng-switch-when="3">
+                    <video src="{{src}}" controls="controls" width="100%"></video>
+                </div>
+                <div ng-switch-when="2">
+                    <img src="{{x}}" ng-repeat="x in src" style="width: 98%;" />
+                </div>
+                <!--div ng-switch-default>
+                    <div >title</div>
+                </div-->
+
+                <div class="post_info">
+                    <!--a href="javascript:alert('请先下载APP后操作')" style="margin-left: 0;">
+                      <span class="glyphicon glyphicon-thumbs-up"></span>
+                      <span id="">{{like}}</span>
+                    </a>
+                    <a href="javascript:alert('请先下载APP后操作')" style="margin-left: 0;">
+                      <span class="glyphicon glyphicon-thumbs-down"></span>
+                      <span id="">{{unlike}}</span>
+                    </a-->
+                    <a style="margin-left: 0;">
+                        <span class="glyphicon glyphicon-eye-open"></span>
+                        <span id="">{{view}}</span>
+                    </a>
+
+                    <span style="float: right;">{{addtime}}</span>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 15px;">
+                <a href="javascript:void(0);" ng-click="renderer('/Home/Index/share?id='+ hl.id)" ng-repeat="hl in list">
+                    <div class="col-xs-6 col-sm-4 list_item">
+
+                        <div class="img_item" ng-if="hl.type==2">
+                            <img src="{{hl.file[0]}}" style="width: 100%;"/>
+                        </div>
+                        <div class="img_item" ng-if="hl.type==3">
+                            <img src="{{hl.file['cover']}}" style="width: 100%;" />
+                        </div>
+                        <p>{{hl.title}}</p>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+        <div class="col-sm-4" style="overflow: hidden;">
+
+            <div class="row">
+                <div class="box hot_box" style=" overflow: hidden;">
+                    <div class="list_title">{{lang.hotListTitle}}</div>
+
+                    <a href="javascript:void(0);" ng-click="renderer('/Home/Index/share?id='+ hl.id)" ng-repeat="hl in hotList">
+                        <div class="col-xs-12 list_item">
+
+                            <div class="img_item" ng-if="hl.type==2">
+                                <img src="{{hl.file[0]}}" style="width: 100%;"/>
+                            </div>
+                            <div class="img_item" ng-if="hl.type==3">
+                                <img src="{{hl.file['cover']}}" style="width: 100%;" />
+                            </div>
+                            <p>{{hl.title}}</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    var app = angular.module('myApp', []);
+    var url = location.href;
+    var title = 'ff';
+    var Lang  = {"logo":"http:\/\/api.enjoy-plus.com\/AppLogo\/BURN.BW-A.png",
+        "download":"\u4e0b\u8f7dApp",
+        "downloadUrl":"http:\/\/obdl62qsn.bkt.clouddn.com\/HappySKy2016_v2.0.23.160817.apk",
+        "hotListTitle":"\u5927\u5bb6\u90fd\u5728\u770b\u4ec0\u4e48",
+        "appName":"\u6021\u68a6",
+        "appDesc":"\u8ba9\u793e\u4ea4\u53d8\u5f97\u66f4\u771f\u5b9e!"
+    };
+
+    app.controller('content', function($scope, $http, $sce) {
+        var content;
+        var list;
+        var hotList;
+
+        //$scope = Object.assign($scope, Lang);console.dir(Lang);
+        $scope.lang = Lang;
+
+        $scope.renderer = function(href){
+            url = href != '' ? href : url;
+
+            $http.get(url).success(function(json) {
+                content = json.content;
+                $scope.type = parseInt(content.type);
+                $scope.hotList = json.hotList;
+                $scope.list = json.list;
+
+                $scope.title = content.title;
+                $scope.like  = content.like;
+                $scope.unlike  = content.unlike;
+                $scope.view  = content.view;
+                $scope.addtime  = content.addtime;
+
+                //app.value('title', $scope.title);
+
+                switch( $scope.type ){
+                    case 3:
+                        //$scope.src = content.file.video;
+                        $scope.src = function(url){
+                            return $sce.trustAsResourceUrl(url);
+                        }(content.file.video);
+                        break;
+                    case 2:
+                        $scope.src = content.file;
+                        break;
+                    default:
+                        //$scope.title = content.title;
+                        break;
+                }
+            });
+        };
+
+        $scope.renderer('');
+    });
+
+</script>
+</body>
+
+</html>
