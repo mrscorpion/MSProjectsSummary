@@ -1,7 +1,6 @@
 # MSProjectsSummary
 HTML5 &amp; Wired AudioUnit Framework API...
 
-
 ---
 ## Wired API Guidance Note
 ### How to use this framework
@@ -14,6 +13,11 @@ HTML5 &amp; Wired AudioUnit Framework API...
 [[MSAudioManager sharedInstance] sendCustomWithLever:1];
 ```
   
+---
+## [Control Video links](http://i.youku.com/i/UNTI0MzMwMDQ4?spm=a2h0j.8191423.subscription_wrap.DD~A.s9qhh2)
+- [Wired](http://v.youku.com/v_show/id_XMTg4NzY5MTM3Mg==.html?spm=a2hzp.8244740.userfeed.5!2~5~5~5!3~5~A.MWf5qD)
+- [Bluetooth](http://v.youku.com/v_show/id_XMTYxMDE4MTg4NA==.html?spm=a2hzp.8244740.userfeed.5!8~5~5~5!3~5~A.MWf5qD)
+
 ---
 ## HTML5
 ### MSHelp
