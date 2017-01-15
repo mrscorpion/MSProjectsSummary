@@ -24,8 +24,16 @@ WKWebview & JavaScript
 - ### [MSHelp](http://203.88.167.184/help/index.html)
 
 ---
-## MRCX
-简单微信小程序，包含 跑步功能 和 基础动画...
+## MRCX 微信小程序
+- 简易计算器
+- 跑步小程序：跑步功能 & 基础动画
+### 问题
+```
+VM134:2 app.json Expecting 'STRING','NUMBER','NULL','TRUE','FALSE','{','[', got INVALID     | ^
+```
+### 原因
+在app.json中去掉注释即可：// app.json 全局配置
+
 
 ---
 ## [Control Video links](http://i.youku.com/i/UNTI0MzMwMDQ4?spm=a2h0j.8191423.subscription_wrap.DD~A.s9qhh2)
