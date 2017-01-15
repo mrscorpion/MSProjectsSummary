@@ -1,0 +1,22 @@
+
+<view clas="mainView">
+    <!--标题-->
+
+    <view class="header">
+        <image class="icon" src="/resources/firefly3.png" mode="aspectFill"/>
+        <view class="bigTitle">mr</view>
+        <view class="desc">Let us run - mr scorpion</view>
+    </view>
+    
+    <view class="body">
+        <view class="widget">
+            <block wx:for="{{pageNames}}">
+                <view class="widgets__item">
+                    <navigator url="{{item.id}}/{{item.id}}">{{item.name}}</navigator>
+                </view>
+            </block>
+        </view>
+    </view>
+
+</view>
+    
