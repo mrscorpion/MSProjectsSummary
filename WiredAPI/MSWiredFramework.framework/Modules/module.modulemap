@@ -1,0 +1,6 @@
+framework module MSWiredFramework {
+  umbrella header "MSWiredFramework.h"
+
+  export *
+  module * { export * }
+}
