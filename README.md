@@ -13,3 +13,12 @@ HTML5 &amp; Wired AudioUnit Framework API...
 ```ObjC
 [[MSAudioManager sharedInstance] sendCustomWithLever:1];
 ```
+  
+---
+## HTML5
+### MSHelp
+### MSShare
+
+---
+## Java & C & C++ & Objective-C & Swift
+samlpe examples: how to use these languages print "Hello World!"
