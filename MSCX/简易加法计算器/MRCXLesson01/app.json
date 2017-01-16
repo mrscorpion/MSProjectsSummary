@@ -1,0 +1,13 @@
+{
+  "pages":[
+    "pages/plus/plus",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Mr.Scorpion 简易加法运算器",
+    "navigationBarTextStyle":"black"
+  }
+}
