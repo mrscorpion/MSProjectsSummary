@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "page/controller/meet/meet",
+    "page/controller/chat/chat",
+    "page/controller/community/community",
+    "page/controller/control/control",
+    "page/controller/me/me"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#82D453",
+    "navigationBarTitleText": "HAPPY SKY",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar" : {
+    "color": "#dddddd",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor":"#ffffff",
+    "list" : [
+      {
+        "pagePath" : "page/controller/meet/meet",
+        "iconPath": "image/wechat.png",
+        "selectedIconPath" : "image/wechatHL.png",
+        "text" : "偶遇"
+      }, 
+      {
+        "pagePath" : "page/controller/chat/chat",
+        "iconPath": "image/wechat.png",
+        "selectedIconPath" : "image/wechatHL.png",
+        "text" : "聊天"
+      },
+      {
+        "pagePath" : "page/controller/community/community",
+        "iconPath": "image/wechat.png",
+        "selectedIconPath" : "image/wechatHL.png",
+        "text" : "圈子"
+      },
+      {
+        "pagePath" : "page/controller/control/control",
+        "iconPath": "image/wechat.png",
+        "selectedIconPath" : "image/wechatHL.png",
+        "text" : "控制"
+      },
+      {
+        "pagePath" : "page/controller/me/me",
+        "iconPath": "image/wechat.png",
+        "selectedIconPath" : "image/wechatHL.png",
+        "text" : "我"
+      }
+    ]
+  }
+}
