@@ -2,6 +2,29 @@
 HTML5 &amp; Wired AudioUnit Framework API...
 
 ---
+## HTML5
+WKWebview & JavaScript
+- ### [MSShare](http://api.enjoy-plus.com/Home/index/share?id=438&appName=爱雅科技&appDesc=让社交变得更真实!&release_channel=BURN.BW-A&download=下载App&hotListTitle=睡不着～)
+
+  + [Article](#)
+  
+  + Code
+    * [HTML5](#)
+    * [PHP](#)
+    
+  + Images
+  ![](MSHTML5/MSShare/share01.png)
+  ![](MSHTML5/MSShare/share02.png)
+  
+  + Links
+    + [Video](http://api.enjoy-plus.com/Home/index/share?id=438&appName=%E7%88%B1%E9%9B%85%E7%A7%91%E6%8A%80&appDesc=%E8%AE%A9%E7%A4%BE%E4%BA%A4%E5%8F%98%E5%BE%97%E6%9B%B4%E7%9C%9F%E5%AE%9E!&release_channel=BURN.BW-A&download=%E4%B8%8B%E8%BD%BDApp&hotListTitle=%E7%9D%A1%E4%B8%8D%E7%9D%80%EF%BD%9E)
+    + [Image](http://api.enjoy-plus.com/Home/index/share?id=438&appName=%E7%88%B1%E9%9B%85%E7%A7%91%E6%8A%80&appDesc=%E8%AE%A9%E7%A4%BE%E4%BA%A4%E5%8F%98%E5%BE%97%E6%9B%B4%E7%9C%9F%E5%AE%9E!&release_channel=BURN.BW-A&download=%E4%B8%8B%E8%BD%BDApp&hotListTitle=%E7%9D%A1%E4%B8%8D%E7%9D%80%EF%BD%9E)
+
+  
+    
+- ### [MSHelp](http://203.88.167.184/help/index.html)
+
+---
 ## Wired API Guidance Note
 ### How to use this framework
 - 1.git clone  
@@ -12,29 +35,6 @@ HTML5 &amp; Wired AudioUnit Framework API...
 ```ObjC
 [[MSAudioManager sharedInstance] sendCustomWithLever:1];
 ```
-
----
-## HTML5
-WKWebview & JavaScript
-- ### [MSShare](http://api.enjoy-plus.com/Home/index/share?id=438&appName=爱雅科技&appDesc=让社交变得更真实!&release_channel=BURN.BW-A&download=下载App&hotListTitle=睡不着～)
-
-  + [Article](#)
-  
-  + Images
-  ![](MSHTML5/MSShare/share01.png)
-  ![](MSHTML5/MSShare/share02.png)
-  
-  + Links
-    + [Video](http://api.enjoy-plus.com/Home/index/share?id=438&appName=%E7%88%B1%E9%9B%85%E7%A7%91%E6%8A%80&appDesc=%E8%AE%A9%E7%A4%BE%E4%BA%A4%E5%8F%98%E5%BE%97%E6%9B%B4%E7%9C%9F%E5%AE%9E!&release_channel=BURN.BW-A&download=%E4%B8%8B%E8%BD%BDApp&hotListTitle=%E7%9D%A1%E4%B8%8D%E7%9D%80%EF%BD%9E)
-    + [Image](http://api.enjoy-plus.com/Home/index/share?id=438&appName=%E7%88%B1%E9%9B%85%E7%A7%91%E6%8A%80&appDesc=%E8%AE%A9%E7%A4%BE%E4%BA%A4%E5%8F%98%E5%BE%97%E6%9B%B4%E7%9C%9F%E5%AE%9E!&release_channel=BURN.BW-A&download=%E4%B8%8B%E8%BD%BDApp&hotListTitle=%E7%9D%A1%E4%B8%8D%E7%9D%80%EF%BD%9E)
-
-  + Code
-  
-    + [HTML5](#)
-    
-    + [PHP](#)
-    
-- ### [MSHelp](http://203.88.167.184/help/index.html)
 
 ---
 ## MRCX 微信小程序
@@ -56,4 +56,4 @@ VM134:2 app.json Expecting 'STRING','NUMBER','NULL','TRUE','FALSE','{','[', got 
 
 ---
 ## Java & C & C++ & Objective-C & Swift
-samlpe examples: how to use these languages print "Hello World!"
+samlpe examples: how to use these languages
