@@ -69,10 +69,8 @@ samlpe examples: how to use these languages
 - cd **
 
 - 执行指令 （示例使用的是5.3.0版本）
-
-  + curl -R -O http://www.lua.org/ftp/lua-5.3.0.tar.gz  
-  
-  + tar zxf lua-5.3.0.tar.gz  
+  + curl -R -O http://www.lua.org/ftp/lua-5.3.0.tar.gz  
+  + tar zxf lua-5.3.0.tar.gz  
   
   + cd lua-5.3.0  
   
@@ -82,11 +80,9 @@ samlpe examples: how to use these languages
   
     * 如若报错，如下  
     
-    ```
-    cd src && mkdir -p /usr/local/bin /usr/local/include /usr/local/lib /usr/local/man/man1 /usr/local/share/lua/5.3 /usr/local/lib/lua/5.3
+    ```cd src && mkdir -p /usr/local/bin /usr/local/include /usr/local/lib /usr/local/man/man1 /usr/local/share/lua/5.3 /usr/local/lib/lua/5.3
 mkdir: /usr/local/man/man1: Permission denied
-make: *** [install] Error 1
-    ```
+make: *** [install] Error 1```
       
     
     * 使用 sudo make install
