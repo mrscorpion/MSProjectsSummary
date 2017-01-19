@@ -80,7 +80,7 @@ cd src && mkdir -p /usr/local/bin /usr/local/include /usr/local/lib /usr/local/m
     mkdir: /usr/local/man/man1: Permission denied
     make: *** [install] Error 1
 ```
-    * 使用 sudo make install
+      * 使用 sudo make install
     
 
 - 使用示例 (创建一个 helloworld.lua 文件)
