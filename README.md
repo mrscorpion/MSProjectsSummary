@@ -71,21 +71,16 @@ samlpe examples: how to use these languages
 - 执行指令 （示例使用的是5.3.0版本）
   + curl -R -O http://www.lua.org/ftp/lua-5.3.0.tar.gz  
   + tar zxf lua-5.3.0.tar.gz  
-  
-  + cd lua-5.3.0  
-  
-  + make macosx test  
-  
-  + make install  
-  
-    * 如若报错，如下  
+  + cd lua-5.3.0  
+  + make macosx test  
+  + make install  
+    * 如若报错，如下  
     
     ```cd src && mkdir -p /usr/local/bin /usr/local/include /usr/local/lib /usr/local/man/man1 /usr/local/share/lua/5.3 /usr/local/lib/lua/5.3
-mkdir: /usr/local/man/man1: Permission denied
-make: *** [install] Error 1```
-      
+    mkdir: /usr/local/man/man1: Permission denied
+    make: *** [install] Error 1```
     
-    * 使用 sudo make install
+    * 使用 sudo make install
   
 - 使用示例 (创建一个 helloworld.lua 文件)
  + cd ~/desktop  
@@ -93,9 +88,7 @@ make: *** [install] Error 1```
  + cd helloworld  
  + touch helloworld.lua  
  + vim helloworld.lua  
-  * 添加代码 
-    ```print("hello lua")```
+    * 添加代码  `print("hello lua")`
     
  + lua HelloWorld.lua  
-  * 输出结果 
-    ```Hello lua```
+    * 输出结果 `Hello lua`
