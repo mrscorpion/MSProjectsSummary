@@ -75,12 +75,14 @@ samlpe examples: how to use these languages
   + make macosx test  
   + make install  
     * 如若报错，如下  
-    
-    ```cd src && mkdir -p /usr/local/bin /usr/local/include /usr/local/lib /usr/local/man/man1 /usr/local/share/lua/5.3 /usr/local/lib/lua/5.3
-    mkdir: /usr/local/man/man1: Permission denied
-    make: *** [install] Error 1```
-    
     * 使用 sudo make install
+    
+```ObjC
+cd src && mkdir -p /usr/local/bin /usr/local/include /usr/local/lib /usr/local/man/man1 /usr/local/share/lua/5.3 /usr/local/lib/lua/5.3
+    mkdir: /usr/local/man/man1: Permission denied
+    make: *** [install] Error 1
+```
+    
   
 - 使用示例 (创建一个 helloworld.lua 文件)
  + cd ~/desktop  
@@ -89,6 +91,5 @@ samlpe examples: how to use these languages
  + touch helloworld.lua  
  + vim helloworld.lua  
     * 添加代码  `print("hello lua")`
-    
  + lua HelloWorld.lua  
-    * 输出结果 `Hello lua`
+    * 输出结果 `hello lua`
