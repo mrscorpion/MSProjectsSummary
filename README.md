@@ -55,5 +55,34 @@ VM134:2 app.json Expecting 'STRING','NUMBER','NULL','TRUE','FALSE','{','[', got 
 - [Bluetooth](http://v.youku.com/v_show/id_XMTYxMDE4MTg4NA==.html?spm=a2hzp.8244740.userfeed.5!8~5~5~5!3~5~A.MWf5qD)
 
 ---
-## Java & C & C++ & Objective-C & Swift
+## Java & C & C++ & Objective-C & Swift & lua
 samlpe examples: how to use these languages
+
+### lua 环境安装（Mac OS X系统）
+
+- cd **
+- 执行指令 （示例使用的是5.3.0版本）
+  + curl -R -O http://www.lua.org/ftp/lua-5.3.0.tar.gz
+  + tar zxf lua-5.3.0.tar.gz
+  + cd lua-5.3.0
+  + make macosx test
+  + make install
+    * 如若报错，如下
+    ```
+    cd src && mkdir -p /usr/local/bin /usr/local/include /usr/local/lib /usr/local/man/man1 /usr/local/share/lua/5.3 /usr/local/lib/lua/5.3
+mkdir: /usr/local/man/man1: Permission denied
+make: *** [install] Error 1
+    ```
+    * 使用 sudo make install
+  
+- 使用示例 (创建一个 helloworld.lua 文件)
+ + cd ~/desktop
+ + mkdir helloworld
+ + cd helloworld
+ + touch helloworld.lua
+ + vim helloworld.lua
+  * 添加代码 
+    ```print("hello lua")```
+ + lua HelloWorld.lua
+  * 输出结果 
+    ```Hello lua```
