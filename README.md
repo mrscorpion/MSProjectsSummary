@@ -55,20 +55,31 @@ VM134:2 app.json Expecting 'STRING','NUMBER','NULL','TRUE','FALSE','{','[', got 
 - [Bluetooth](http://v.youku.com/v_show/id_XMTYxMDE4MTg4NA==.html?spm=a2hzp.8244740.userfeed.5!8~5~5~5!3~5~A.MWf5qD)
 
 ---
-## Java & C & C++ & Objective-C & Swift & lua
+## Java & C & C++ & Objective-C & Swift & PHP & lua
 samlpe examples: how to use these languages
 
-### lua 环境安装（Mac OS X系统）
+#### Java  
+#### C 
+#### C++
+#### Objective-C
+#### Swift
+#### PHP
+#### lua 环境安装（Mac OS X系统）
 
 - cd **
 
 - 执行指令 （示例使用的是5.3.0版本）
 
   + curl -R -O http://www.lua.org/ftp/lua-5.3.0.tar.gz  
+  
   + tar zxf lua-5.3.0.tar.gz  
+  
   + cd lua-5.3.0  
+  
   + make macosx test  
+  
   + make install  
+  
     * 如若报错，如下  
     
     ```
@@ -76,6 +87,7 @@ samlpe examples: how to use these languages
 mkdir: /usr/local/man/man1: Permission denied
 make: *** [install] Error 1
     ```
+      
     
     * 使用 sudo make install
   
