@@ -120,7 +120,8 @@ console.log('Server running at http://127.0.0.1:8090/');
 
 * node server.js
 
-	  `Server running at http://127.0.0.1:8080/`
+	  `Server running at http://127.0.0.1:8090/`
   
-* 使用浏览器访问 `http://127.0.0.1:8080/`
-   ```Hello World```
+* 使用浏览器访问 `http://127.0.0.1:8090/`
+	
+	```Hello World```
