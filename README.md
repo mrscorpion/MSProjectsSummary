@@ -55,7 +55,7 @@ VM134:2 app.json Expecting 'STRING','NUMBER','NULL','TRUE','FALSE','{','[', got 
 - [Bluetooth](http://v.youku.com/v_show/id_XMTYxMDE4MTg4NA==.html?spm=a2hzp.8244740.userfeed.5!8~5~5~5!3~5~A.MWf5qD)
 
 ---
-## Java & C & C++ & Objective-C & Swift & PHP & lua
+## Java & C & C++ & Objective-C & Swift & PHP & lua & node.js
 samlpe examples: how to use these languages
 
 #### Java  
@@ -64,7 +64,8 @@ samlpe examples: how to use these languages
 #### Objective-C
 #### Swift
 #### PHP
-#### lua 环境安装（Mac OS X系统）
+
+#### lua 安装使用（Mac OS X系统）
 
 - cd **
 
@@ -92,3 +93,33 @@ cd src && mkdir -p /usr/local/bin /usr/local/include /usr/local/lib /usr/local/m
     * 添加代码  `print("hello lua")`
  + lua HelloWorld.lua  
     * 输出结果 `hello lua`
+    
+#### node.js
+##### 简单示例
+* vim server.js
+* 添加代码
+```
+// 1. 引入 required 模块
+var http = require('http');
+
+// 2. 创建服务器
+http.createServer(function (request, response) {
+
+	// 发送 HTTP 头部 
+	// HTTP 状态值: 200 : OK
+	// 内容类型: text/plain
+	response.writeHead(200, {'Content-Type': 'text/plain'});
+
+	// 发送响应数据 "Hello World"
+	response.end('Hello World\n');
+}).listen(8090);
+
+// 终端打印如下信息
+console.log('Server running at http://127.0.0.1:8090/');
+```
+
+* node server.js
+  `Server running at http://127.0.0.1:8080/`
+  
+* 使用浏览器访问 `http://127.0.0.1:8080/`
+   ```Hello World```
