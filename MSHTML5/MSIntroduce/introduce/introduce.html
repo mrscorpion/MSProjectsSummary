@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <script src="introduce.js"></script><script type="text/javascript">
+    var startTime = new Date().getTime();
+</script>
+    <link href="introduce.css" type="text/css" rel="stylesheet">
+    <title>功能介绍</title>
+    <style type="text/css">
+        body{
+            background: #e6e6e6;
+            background-color: #FFFFFF;
+        }
+        .main-version-header{
+            border-bottom:1px solid #C6C6C6;
+        }
+        .main-version-body{
+            border-top:1px solid #F9F9F9;
+        }
+        div.main-version-body img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-version-header">
+    <h3>Aiya for iPhone 3.0.11版本功能介绍</h3>
+</div>
+
+
+<div class="main-version-body">
+    <!-- start这里的内容如果needUpgrade为true则拉取最新版本的功能介绍  否则就是当前版本介绍 -->
+    <p>1.<strong>带线系列</strong><br>
+        通过耳机孔连接带线设备进行控制
+    </p>
+    <div>
+        <img src="sources/1.jpg">
+    </div>
+    <p>2.<strong>蓝牙系列</strong><br>
+        通过蓝牙连接普通蓝牙产品进行控制
+    </p>
+    <div>
+        <img src="sources/2.jpg">
+    </div>
+    <p>3.<strong>唤醒系列</strong><br>
+        通过蓝牙连接乳贴类产品进行控制
+    </p>
+    <div>
+        <img src="sources/3.jpg">
+    </div>
+    <p>4.<strong>保健系列</strong><br>
+        通过蓝牙连接保健类产品进行控制
+    </p>
+    <div>
+        <img src="sources/4.jpg">
+    </div>
+    <!-- end -->
+</div>
+
+
+
+
+
+<script type="text/javascript">
+    (function(){
+        // 滚动到哪图片显示到哪
+        var scrollTimer = null;
+        addEventListener("scroll", function(){
+
+            if(scrollTimer){
+                clearTimeout(scrollTimer);
+            }
+            scrollTimer = setTimeout(function(){
+                // 页面主
+                var sy = window.scrollY;
+                // 窗口高
+                var cheihgt = window.innerHeight;
+                var olis = document.querySelectorAll("img[tsrc]");
+                var length = olis.length;
+                var currTop = 0;
+                for(var i = 0; i< length; i++){
+                    currTop = olis[i].offsetTop;
+                    // li高度187 判断是否在视窗中
+                    if(currTop+187 > sy && currTop < sy + cheihgt){
+                        if(olis[i].getAttribute("tsrc")){
+                            olis[i].src = olis[i].getAttribute("tsrc")+"?v=2013070101";
+                            olis[i].removeAttribute("tsrc");
+                        }
+                    }
+                    if(currTop > sy + cheihgt){
+                        break;
+                    }
+                }
+
+            }, 300);
+
+        }, false);
+        setTimeout(scrollTo, 100, 0, 1);
+        window.addEventListener('load',function(){
+            if(window.innerHeight >= document.body.offsetHeight || window.innerHeight >= document.documentElement.offsetHeight){
+                var olis = document.querySelectorAll("img[tsrc]");
+                var length = olis.length;
+                for(var i = 0; i< length; i++){
+                    if(olis[i].getAttribute("tsrc")){
+                        olis[i].src = olis[i].getAttribute("tsrc")+"?v=20150402";
+                        olis[i].removeAttribute("tsrc");
+                    }
+                }
+            }
+        }, false);
+    })();
+</script>
+
+<script type="text/javascript">
+    (function(){
+        var loadBeforeTime = typeof startTime !== 'undefined' ? startTime : new Date().getTime();
+        window.addEventListener('load',function(){
+            // 获取页面加载完毕时间
+            var loadedTime = new Date().getTime() - loadBeforeTime;
+            loadBeforeTime = new Date(loadBeforeTime);
+            var request = [
+                "ac=904",
+                "method=mqqlog",
+                "page_name="+encodeURIComponent("/mqq/intro/index.jsp"),
+                "project_id=aboutqq",
+                "in_time="+loadBeforeTime.getFullYear()+"-"+(loadBeforeTime.getMonth()<10?"0"+(loadBeforeTime.getMonth()+1):loadBeforeTime.getMonth()+1)+"-"+(loadBeforeTime.getDate()<10?"0"+loadBeforeTime.getDate():loadBeforeTime.getDate())+" "+(loadBeforeTime.getHours()<10?"0"+loadBeforeTime.getHours():loadBeforeTime.getHours())+":"+(loadBeforeTime.getMinutes()<10?"0"+loadBeforeTime.getMinutes():loadBeforeTime.getMinutes())+":"+(loadBeforeTime.getSeconds()<10?"0"+loadBeforeTime.getSeconds():loadBeforeTime.getSeconds()),
+                "load_time="+loadedTime,
+                "ref_type=appid",
+                "ref_name=537049670",
+                "ua="+encodeURIComponent(navigator.userAgent),
+                "uin=-608895530",
+            ];
+            new Image().src = "//mapp1.3g.qq.com/json/vaction.jsp?"+request.join("&");
+        },false)
+    })();
+</script>
+
+</body></html>
