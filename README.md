@@ -26,6 +26,9 @@ WKWebview & JavaScript
 
 - ### [MSIntroduce](http://api.enjoy-plus.com/help/introduce.html)
 
+- ### ![happynewyear](happynewyear.mp4)
+恭贺新春HTML5小demo
+
 ---
 ## Wired API Guidance Note
 ### How to use this framework
