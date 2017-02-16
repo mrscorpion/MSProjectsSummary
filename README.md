@@ -31,6 +31,14 @@ WKWebview & JavaScript
 
 
 ---
+## PHP
+- 添加水印
+![](MSPHP/MSPHPFunction/watermark.png.jpeg)
+
+- 随机验证码
+- session保存登录数据
+
+---
 ## Wired API Guidance Note
 ### How to use this framework
 - 1.git clone  
